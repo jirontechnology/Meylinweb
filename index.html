@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gana dinero desde casa</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 15px;
+}
+
+/* TITULO */
+.headline {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sub {
+  text-align: center;
+  color: #555;
+}
+
+/* IMAGEN */
+.hero img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* URGENCIA */
+.badge {
+  background: red;
+  color: white;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+/* TEXTO */
+.texto {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+/* BENEFICIOS */
+.beneficios div {
+  margin: 8px 0;
+}
+
+/* BOTON PRINCIPAL */
+.boton {
+  display: block;
+  background: #25D366;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* CONTADOR */
+.contador {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  margin-top: 10px;
+}
+
+/* BOTON FLOTANTE */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* PRUEBA SOCIAL */
+.social {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  margin-top: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="headline">
+    Gana dinero desde casa con tu celular
+  </div>
+
+  <div class="sub">
+    Sin experiencia • Paso a paso • Empieza hoy
+  </div>
+
+  <div class="hero">
+    <img src="img.jpg">
+  </div>
+
+  <div class="badge">
+    🔥 Solo quedan pocos cupos
+  </div>
+
+  <div class="texto">
+    Yo también estaba cansado de no ver resultados...
+  </div>
+
+  <div class="texto">
+    Empecé con este método y ahora estoy ayudando a otras personas a generar ingresos desde casa.
+  </div>
+
+  <div class="beneficios">
+    <div>✔ No necesitas experiencia</div>
+    <div>✔ Solo necesitas tu celular</div>
+    <div>✔ Puedes empezar hoy</div>
+    <div>✔ Compatible con tu trabajo actual</div>
+  </div>
+
+  <a class="boton" href="https://wa.me/18174898083?text=Quiero%20información" target="_blank">
+    👉 QUIERO EMPEZAR AHORA
+  </a>
+
+  <!-- CONTADOR -->
+  <div class="contador" id="contador">
+    Cargando cupos...
+  </div>
+
+  <div class="social">
+    Personas de tu zona ya están empezando hoy
+  </div>
+
+</div>
+
+<!-- BOTON FLOTANTE -->
+<a class="float" href="https://wa.me/18174898083" target="_blank">💬</a>
+
+<script>
+/* CONTADOR DINÁMICO */
+let cupos = Math.floor(Math.random() * 7) + 3;
+
+function actualizarCupos() {
+  document.getElementById("contador").innerText =
+    "⚠️ Quedan " + cupos + " cupos disponibles hoy";
+}
+
+actualizarCupos();
+
+/* BAJA CUPOS CADA 10 SEGUNDOS */
+setInterval(() => {
+  if (cupos > 1) {
+    cupos--;
+    actualizarCupos();
+  }
+}, 10000);
+</script>
+
+</body>
+</html>
